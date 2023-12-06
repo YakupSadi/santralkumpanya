@@ -1,10 +1,10 @@
 <h1 align="center">Santral Kumpanya</h1>
 
 <h3 align="center">
-    See Live -> <a href="https://santralkumpanya.vercel.app/">santralkumpanya</a>
+    See Live -> <a href="santralkumpanya.vercel.app">santralkumpanya.com</a>
 </h3>
 
-![santral](https://github.com/YakupSadi/santralkumpanya/assets/113919143/f19e63c2-8247-4c67-93ed-36ebe3aafff8)
+![santral](https://github.com/YakupSadi/santralkumpanya/assets/113919143/7b64b2bc-6df7-458a-9843-9578aaa6cc8a)
 
 # License
 Santral Kumpanya is MIT licensed
