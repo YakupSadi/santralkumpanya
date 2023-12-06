@@ -4,7 +4,7 @@
     See Live -> <a href="https://santralkumpanya.vercel.app/">santralkumpanya</a>
 </h3>
 
-![Ekran görüntüsü 2023-12-03 222414](https://github.com/YakupSadi/santralkumpanya/assets/113919143/0e460637-c848-4f71-bbe1-f55d78fb9e43)
+![santral](https://github.com/YakupSadi/santralkumpanya/assets/113919143/f19e63c2-8247-4c67-93ed-36ebe3aafff8)
 
 # License
 Santral Kumpanya is MIT licensed
