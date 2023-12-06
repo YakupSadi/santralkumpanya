@@ -1,5 +1,6 @@
 <script>
     import { createEventDispatcher } from "svelte"
+    import { page } from '$app/stores'
     import { fade }    from 'svelte/transition'
     import { onMount } from 'svelte'
 
@@ -67,19 +68,19 @@
         <nav transition:fade>
             <ul>
                 <li>
-                    <a href="/" on:click={ toggleMenu }>Ana Sayfa</a>
+                    <a href="/" class:active={ $page.url.pathname === '/' } on:click={ toggleMenu }>Ana Sayfa</a>
                 </li>
                 <li>
-                    <a href="/test" on:click={ toggleMenu }>Mesut Süre İle İlişki Testi</a>
+                    <a href="/test" class:active={ $page.url.pathname === '/test' } on:click={ toggleMenu }>Mesut Süre İle İlişki Testi</a>
                 </li>
                 <li>
-                    <a href="/alone" on:click={ toggleMenu }>Yalnızım Mesut Bey</a>
+                    <a href="/alone" class:active={ $page.url.pathname === '/alone' } on:click={ toggleMenu }>Yalnızım Mesut Bey</a>
                 </li>
                 <li>
-                    <a href="/about" on:click={ toggleMenu }>Hakkımızda</a>
+                    <a href="/about" class:active={ $page.url.pathname === '/about' } on:click={ toggleMenu }>Hakkımızda</a>
                 </li>
                 <li>
-                    <a href="/scene" on:click={ toggleMenu }>Sahne Üstü</a>
+                    <a href="/scene" class:active={ $page.url.pathname === '/scene' } on:click={ toggleMenu }>Sahne Üstü</a>
                 </li>
             </ul>
         </nav>
@@ -101,6 +102,11 @@
 </header>
 
 <style>
+    .active
+    {
+        background-color: #e21c21;
+    }
+
     #header
     {
         display: flex;
