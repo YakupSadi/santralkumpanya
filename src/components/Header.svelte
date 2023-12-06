@@ -1,4 +1,5 @@
 <script>
+    import { createEventDispatcher } from "svelte"
     import { fade }    from 'svelte/transition'
     import { onMount } from 'svelte'
 
@@ -15,39 +16,18 @@
     })
 
 
+    const dispatch = createEventDispatcher()
+
     function toggleMenu()
     {
         if( 992 >= innerWidth )
         {
             menuOpen   = !menuOpen
-            scrollStat = !scrollStat
             clickedBtn = !clickedBtn
+            scrollStat = !scrollStat
+
+            dispatch( 'headerClicked', scrollStat )
         }
-    }
-
-
-	const wheel = ( node, options ) => {
-
-		let { scrollStat } = options
-
-		const handler = e => {
-
-		    if( !scrollStat ) e.preventDefault()
-		}
-
-		node.addEventListener( 'wheel', handler, { passive: false } )
-
-		return {
-
-			update( options )
-            {
-				scrollStat = options.scrollStat
-			},
-			destroy()
-            {
-				node.removeEventListener( 'wheel', handler, { passive: false } )
-			}
-		}
     }
 
 
@@ -59,20 +39,28 @@
         {
             if( clickedBtn )
             {
+                scrollStat = true
                 menuOpen   = true
-                scrollStat = false
+
+                dispatch( 'headerClicked', scrollStat )
             }
-            else menuOpen = false
+            else
+            {
+                scrollStat = false
+                menuOpen   = false
+            }
         }
         else
         {
             menuOpen   = true
-            scrollStat = true
+            scrollStat = false
+
+            dispatch( 'headerClicked', scrollStat )
         }
     }
 </script>
 
-<svelte:window use:wheel={{ scrollStat }} on:resize={ onResize } />
+<svelte:window on:resize={ onResize } />
 
 <header id="header">
     { #if menuOpen }
