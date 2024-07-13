@@ -6,5 +6,9 @@
 
 ![santral](https://github.com/YakupSadi/santralkumpanya/assets/113919143/7b64b2bc-6df7-458a-9843-9578aaa6cc8a)
 
+**İstemci:** React, Redux, TailwindCSS
+
+**Sunucu:** Node, Express
+
 # License
 Santral Kumpanya is MIT licensed
